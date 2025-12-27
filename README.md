@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EKS Lab - Kubernetes Cluster with ArgoCD
 
 This repository contains Terraform configurations and Kubernetes manifests for deploying an EKS cluster with ArgoCD, NGINX Ingress, Cert-Manager, and ExternalDNS.
@@ -306,3 +307,6 @@ For issues or questions:
 2. Review the [DNS Setup Guide](docs/DNS_SETUP.md)
 3. Run the verification scripts to diagnose issues
 4. Check Kubernetes and AWS logs
+=======
+
+>>>>>>> 1531060 (messing around with k8s after trying to follow a tutorial series. lots of things deprecated and im new to k8s so hey lets see what we can do. nothing works but its ok lol)

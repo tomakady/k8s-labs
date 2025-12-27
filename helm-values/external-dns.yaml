@@ -1,0 +1,36 @@
+provider: aws
+
+rbac:
+  create: true
+
+image:
+  repository: registry.k8s.io/external-dns/external-dns
+  tag: v0.19.0  # Update from v0.15.0
+
+aws:
+  region: eu-west-2
+
+sources:
+  - service
+  - ingress
+
+policy: sync
+registry: txt
+txtOwnerId: labs-cluster
+
+domainFilters:
+  - labs.tomakady.com
+
+interval: 1m  # Faster sync
+logLevel: info
+logFormat: text
+
+extraArgs:
+  - --aws-zone-type=public
+  - --events
+
+serviceAccount:
+  create: true
+  name: external-dns
+  annotations:
+    eks.amazonaws.com/role-arn: "${role_arn}"

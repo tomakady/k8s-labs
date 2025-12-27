@@ -1,0 +1,8 @@
+.env
+
+*.pem
+
+.terraform
+
+aws-script.sh
+

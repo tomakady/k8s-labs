@@ -1,0 +1,10 @@
+startupapicheck:
+  enabled: false
+
+extraArgs:
+- --dns01-recursive-nameservers=8.8.8.8:53
+- --dns01-recursive-nameservers-only
+
+serviceAccount:
+  annotations:
+    eks.aws.com/role-arn: arn:aws:iam::773913840750:role/cert-manager
